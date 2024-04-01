@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="js/lib/Ace/beautify.min.js"></script>
+
+    <style>
+        code {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            border: 1px solid #d1d1d1;
+            border-radius: 3px;
+            display: block;
+            margin: 10px 0;
+            word-break: break-word;
+            word-wrap: break-word;
+            text-wrap: wrap;
+
+        }
+
+        .card {
+            margin: 1rem;
+        }
+    </style>
+
+    <title>FSM Studio</title>
+</head>
+
+<body class="container mt-5 mb-5">
+
+    <h1 class="text-center mb-5">Parsing Language</h1>
+
+    <div class="card">
+        <div class="card-body">
+            <h2>Data Formats</h2>
+            <ul class="list-group">
+                <li class="list-group-item">Decimal
+                    <pre><code>
+    count = 10;
+    // Assigns the decimal value 10 to the 'count' variable.
+                    </code></pre>
+                </li>
+                <li class="list-group-item">Binary
+                    <pre><code>
+    count = 0b1010;
+    // Assigns the binary value 1010 (decimal 10) to 'count'.
+                    </code></pre>
+                </li>
+                <li class="list-group-item">Hexadecimal
+                    <pre><code>
+    count = 0xA;
+    // Assigns the hexadecimal value A (decimal 10) to 'count'.
+                    </code></pre>
+                </li>
+                <li class="list-group-item">Boolean
+                    <pre><code>
+    flag = true;
+    // Assigns the boolean value 'true' to 'flag'.
+                    </code></pre>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h2>Operators</h2>
+
+            <div class="card">
+                <div class="card-body">
+                    <h3>Arithmetic Operators</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">Addition ('+')
+                            <pre><code>
+    i = 2+2;
+    // Assigns the value 4 to 'i' which is the result of the operation 2+2
+                            </code></pre>
+                        </li>
+                        <li class="list-group-item">Subtraction ('-')
+                            <pre><code>
+    i = 3-2;
+    // Assigns the value 1 to 'i' which is the result of the operation 3-2
+                            </code></pre>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h3>Comparison Operators</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">Equal to ('==')
+                            <pre><code>
+    i == 1;
+    // Compares the value of 'i' with the value '1'
+                            </code></pre>
+                        </li>
+                        <li class="list-group-item">Not equal to ('!=')
+                            <pre><code>
+    i != 1;
+    // Compares the value of 'i' with the value '1'
+                            </code></pre>
+                        </li>
+                        <li class="list-group-item">Greater than ('>')
+                            <pre><code>
+    i > 1;
+    // Checks if the value of 'i' is greater than '1'
+                            </code></pre>
+                        </li>
+                        <li class="list-group-item">Less than ('&lt;')
+                            <pre><code>
+    i &lt; 1;
+    // Checks if the value of 'i' is less than '1'
+                            </code></pre>
+                        </li>
+                        <li class="list-group-item">Greater than or equal to ('>=')
+                            <pre><code>
+    i >= 1;
+    // Checks if the value of 'i' is greater than or equal to '1'
+                            </code></pre>
+                        </li>
+                        <li class="list-group-item">Less than or equal to ('&lt;=')
+                            <pre><code>
+    i &lt;= 1;
+    // Checks if the value of 'i' is less than or equal to '1'
+                            </code></pre>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h3>Logical Operators</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">AND ('&&')
+                            <pre><code>
+    i == 1 && j == 2;
+    // Checks if the expressions "i==1" and "j==2" both return true
+                            </code></pre>
+                        </li>
+                        <li class="list-group-item">OR ('||')
+                            <pre><code>
+    i == 1 || j == 2;
+    // Checks one of the expressions "i==1" and "j==2" returns true
+                            </code></pre>
+                        </li>
+                        <li class="list-group-item">NOT ('!')
+                            <pre><code>
+    !(i);
+    // Negates the value of i
+                            </code></pre>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h3>Assignment Operators</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">Assignment ('=')
+                            <pre><code>
+    i = 3;
+    // Assigns the value 3 to 'i'
+                            </code></pre>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h3>Bitwise Operators</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">Bitwise AND ('&')
+                            <pre><code>
+    a = 10;
+    b = 5;
+    c = a & b;
+    // Performs a bitwise AND operation on each pair of corresponding bits of the operands.
+                            </code></pre>
+                        </li>
+                        <li class="list-group-item">Bitwise OR ('|')
+                            <pre><code>
+    a = 10;
+    b = 5;
+    c = a | b;
+    // Performs a bitwise OR operation on each pair of corresponding bits of the operands.
+                            </code></pre>
+                        </li>
+                        <li class="list-group-item">Bitwise XOR ('^')
+                            <pre><code>
+    a = 10;
+    b = 5;
+    c = a ^ b;
+    // Performs a bitwise XOR (exclusive OR) operation on each pair of corresponding bits of the operands.
+                            </code></pre>
+                        </li>
+                        <li class="list-group-item">Bitwise NOT ('~')
+                            <pre><code>
+    a = 10;
+    c = ~a;
+    // Inverts the bits of the operand, changing 0s to 1s and 1s to 0s.
+                            </code></pre>
+                        </li>
+                        <li class="list-group-item">Left shift ('&lt;&lt;')
+                            <pre><code>
+    a = 10;
+    b = 5;
+    c = a &lt;&lt; b;
+    // Shifts the bits of the left operand to the right by the number of positions specified in the right operand, filling with the sign bit.
+                            </code></pre>
+                        </li>
+                        <li class="list-group-item">Right shift ('>>')
+                            <pre><code>
+    a = 10;
+    b = 5;
+    c = a >> b;
+    // Shifts the bits of the left operand to the right by the number of positions specified in the right operand, filling with the sign bit.
+                            </code></pre>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <h2>Keywords</h2>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h6>Else</h6>
+                    The else keyword is used in conditional statements. It defines the transition to be executed if the
+                    other conditions specified for a certain state are invalid. In other words, it provides an
+                    alternative course of action when the condition is not met.
+                </li>
+                <li class="list-group-item">
+                    <h6>True</h6>
+                    True is a boolean value that represents a logical "true" or "yes" condition. It is one of two
+                    possible boolean values, with the other being false. "true" is often used in conditional
+                    expressions, comparisons, and logical operations to represent that a condition is met or that a
+                    statement is valid or correct.
+                </li>
+                <li class="list-group-item">
+                    <h6>False</h6>
+                    False is the opposite of true and represents a logical "false" or "no" condition. It is the other
+                    boolean value and is used to indicate that a condition is not met or that a statement is invalid or
+                    incorrect.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const elements = document.querySelectorAll("code");
+        for (let i = 0; i < elements.length; i++) {
+
+            const element = elements[i];
+            const content = element.textContent;
+            element.innerHTML = js_beautify(content);
+
+        }
+    </script>
+
+
+</body>
+
+</html>

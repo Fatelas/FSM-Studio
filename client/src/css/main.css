@@ -1,0 +1,354 @@
+/* Adjust styles for the vertical sidebar */
+.sidebar {
+    /* Full height */
+    flex-grow: 1;
+    max-width: 70px;
+    /* Set your preferred width */
+    /* Fixed Sidebar (stay in place on scroll) */
+    background-color: #f8f9fa;
+    /* Sidebar background color */
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Set the direction to column for a vertical layout */
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 8px;
+    /* Adjust padding for better spacing */
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    /* Center content vertically */
+    justify-content: center;
+    /* Center content horizontally */
+    height: 60px;
+    /* Set button height */
+}
+
+.sidebar a:hover {
+    color: #007bff;
+    background-color: #e6e6e6;
+    /* Highlight background on hover */
+}
+
+/* Main content area */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    overflow: auto;
+}
+
+/* Add bottom border to navbar */
+.navbar {
+    border-bottom: 1px solid #d3d3d3;
+    display: flex;
+    flex: 0 0 auto;
+    height: 30px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+}
+
+.nav-tabs .nav-link {
+    border: 1px solid #d3d3d3;
+    /* Add a border around each tab */
+    border-radius: 0;
+    /* Remove border-radius to make tabs rectangular */
+    margin: 0;
+    /* Remove default margin */
+    padding: 5px 10px;
+    /* Adjust padding for a narrower height */
+    color: #000;
+    position: relative;
+    /* Position relative for close button positioning */
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #fff;
+    /* Background color for the active tab */
+    border-color: #d3d3d3;
+    /* Border color for the active tab */
+}
+
+.nav-tabs .close-tab {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Editor area */
+.editor-area {
+    display: flex;
+    flex-grow: 1;
+    width: 0px;
+    flex-direction: column;
+}
+
+.tab-content {
+    display: flex;
+    padding: 0px;
+    flex-grow: 1;
+    height: 0px;
+    flex-direction: row;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.collapse-horizontal {
+    width: 200px;
+    background-color: #f8f9fa;
+    color: #000;
+    overflow-y: none;
+    padding-top: 10px;
+    border-right: 1px solid #d3d3d3;
+    transition: none !important;
+    border-left: 1px solid #d3d3d3;
+}
+
+.collapse-horizontal ul {
+    list-style: none;
+    padding: 0;
+}
+
+.collapse-horizontal li {
+    padding: 8px;
+}
+
+.tree {
+    list-style: none;
+    padding: 0;
+}
+
+.nested-list {
+    display: none;
+    margin-left: 20px;
+}
+
+.nested-list li {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.w1 {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.w2 {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.container-canvas {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    height: 0px;
+    flex-direction: column;
+}
+
+.wrapper-canvas {
+    display: flex;
+    flex: 1 1 auto;
+    overflow: hidden;
+    box-shadow: #000 0 6px 6px -6px inset;
+    padding-right: 5px;
+}
+
+html,
+body {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+
+textarea.alert-danger:focus {
+
+    background-color: var(--bs-danger-border-subtle);
+
+}
+
+textarea.alert-success:focus {
+
+    background-color: var(--bs-success-border-subtle);
+
+}
+
+.nav-tabs .nav-item a.active-tab {
+
+    background-color: #eee;
+    border-color: #aaa;
+
+}
+
+.close-icon {
+
+    display: flex;
+    border-radius: 5px;
+    width: 22px;
+    height: 22px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.close-icon:hover {
+
+    background-color: #bbb;
+
+}
+
+.editor-area.active {
+
+    background-color: #eee;
+
+}
+
+.ace_editor {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.tabs-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.tabs-wrapper-left {
+    display: flex;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.tabs-wrapper-right {
+    background-color: #fff;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+}
+
+/* Tabs for different content */
+.nav-tabs {
+    background-color: #fff;
+    display: flex;
+    flex-grow: 0;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow-x: visible;
+    overflow-y: hidden;
+    height: 35px;
+}
+
+.nav-tabs .nav-item {
+    display: flex;
+    flex-shrink: 0;
+    margin: 0;
+    user-select: none;
+}
+
+.nav-tabs .nav-item a {
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    flex-grow: 1;
+    border-bottom: 0px;
+    height: 35px;
+
+}
+
+.tab-label {
+    flex-shrink: 0;
+    margin-right: 5px;
+}
+
+.shadow-div {
+    position: relative;
+}
+
+div iframe {
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.shadow-div::before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    box-shadow: #000 0 6px 6px -6px inset;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.fa-regular {
+
+    margin-right: 5px;
+
+}
+
+.fa-solid {
+
+    margin-right: 5px;
+
+}
+
+.sidebar-wrapper {
+
+    height: calc(100vh - 40px);
+
+}
+
+.files {
+
+    height: calc(100vh - 40px - 10px - 16px);
+    overflow-y: auto;
+    margin: 0px;
+
+}
+
+.tree {
+
+    height: calc(100vh - 40px - 10px - 16px);
+    overflow-y: auto;
+    margin: 0px;
+
+}
